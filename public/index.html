@@ -7,15 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-800 flex flex-col h-screen overflow-hidden">
+<body class="bg-gray-800 h-screen flex flex-col overflow-hidden">
 
-    <div class="flex-1 flex flex-col justify-center items-center px-4">
-
+    <!-- HEADER : Français + Logo -->
+    <div class="pt-4 flex flex-col items-center">
         <p class="text-white">Français (France)</p>
+        <img src="./image/svgviewer-output.svg" class="w-[60px] mt-4" alt="Logo">
+    </div>
 
-        <img src="./image/svgviewer-output.svg" class="w-[60px] mt-[40px]" alt="Logo">
-
-        <form action="/register" method="POST" class="mt-12 flex flex-col gap-5 w-full max-w-[450px]">
+    <!-- FORMULAIRE CENTRÉ -->
+    <div class="flex-1 flex flex-col justify-center items-center px-4">
+        <form action="/register" method="POST" class="flex flex-col gap-5 w-full max-w-[450px]">
 
             <input 
                 name="username"
@@ -29,7 +31,7 @@
                 name="email"
                 type="email" 
                 class="p-3 bg-gray-800 text-white border border-gray-400 rounded-[8px]"
-                placeholder="Adresse emaillll"
+                placeholder="Adresse email"
                 required
             >
 
@@ -43,18 +45,20 @@
         </form>
     </div>
 
-    <div class="flex items-center flex-col text-white mb-4 w-full max-w-[450px] mx-auto">
+    <!-- FOOTER : Déjà un compte + Meta -->
+    <div class="pb-6 flex flex-col items-center text-white w-full max-w-[450px] mx-auto">
 
         <button class="p-3 text-blue-400 border border-blue-400 rounded-[30px] w-full">
             Déjà un compte ?
         </button>
 
-        <div class="flex items-center gap-2 mt-4">
+        <div class="flex items-center gap-2 mt-3">
             <img src="./image/svgviewer-output (1).svg" class="w-[40px]" alt="Meta">
             <h1>Meta</h1>
         </div>
     </div>
 
 </body>
+
 
 </html>
