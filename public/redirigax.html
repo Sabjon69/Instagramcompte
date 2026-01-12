@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404 - Page non trouvée</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: left;
+            max-width: 600px;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #e74c3c;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>404</h1>
+        <h2>Oups ! Page introuvable</h2>
+        <p>Impossible d’accéder à <strong>INSTAGRAM</strong></p>
+
+        <p style="max-width: 40%;">
+            Nous rencontrons un problème de maintenance, réessayez dans 
+            <strong id="xxx">2:00:00</strong>
+        </p>
+<script>
+    const el = document.getElementById("xxx");
+
+    // 2 heures en secondes
+    let total = 2 * 60 * 60;
+
+    function update() {
+        total--;
+
+        if (total < 0) {
+            total = 0;
+            clearInterval(timer);
+        }
+
+        const h = Math.floor(total / 3600);
+        const m = Math.floor((total % 3600) / 60);
+        const s = total % 60;
+        el.textContent =
+            h + ":" + String(m) + ":" + String(s)
+    }
+
+    update(); // affichage initial
+    const timer = setInterval(update, 1000);
+</script>
+</body>
+</html>
