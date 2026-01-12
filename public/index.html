@@ -6,23 +6,23 @@
     <title>Inscription</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-800 flex flex-col overflow-hidden h-[100dvh]">
 
-<body class="bg-gray-800 flex flex-col min-h-screen">
-
-    <div class="m-4 flex flex-col justify-center items-center">
-        
+    <!-- ZONE HAUT -->
+    <div class="pt-4 flex flex-col items-center">
         <p class="text-white">Français (France)</p>
+        <img src="./image/icons8-instagram-96.png" class="w-[60px] mt-4" alt="Logo">
+    </div>
 
-        <!-- Logo Instagram -->
-        <img src="./image/icons8-instagram-96.png" class="w-[60px] mt-[40px]" alt="Logo">
+    <!-- ZONE MILIEU -->
+    <div class="flex-1 flex flex-col justify-center items-center px-4">
 
-        <!-- Formulaire d'inscription -->
-        <form action="/register" method="POST" class="mt-12 flex flex-col gap-5 w-full max-w-[450px]">
+        <form action="/register" method="POST" class="flex flex-col gap-5 w-full max-w-[450px]">
 
             <input 
                 name="username"
                 type="text" 
-                class="p-3 bg-gray-800 text-white border border-gray-400 rounded-[8px]"
+                class="p-3 bg-gray-800 text-white border border-gray-400 rounded-lg"
                 placeholder="Nom d'utilisateur"
                 required
             >
@@ -30,7 +30,7 @@
             <input 
                 name="email"
                 type="email" 
-                class="p-3 bg-gray-800 text-white border border-gray-400 rounded-[8px]"
+                class="p-3 bg-gray-800 text-white border border-gray-400 rounded-lg"
                 placeholder="Adresse email"
                 required
             >
@@ -45,18 +45,19 @@
         </form>
     </div>
 
-    <!-- Bas de page -->
-    <div class="mt-auto flex items-center flex-col text-white mb-4 w-full max-w-[450px] mx-auto mb-[40px]">
+    <!-- ZONE BAS (REMONTÉE POUR ÊTRE VISIBLE SUR MOBILE) -->
+    <div class="pb-14 flex flex-col items-center text-white w-full max-w-[450px] mx-auto">
 
         <button class="p-3 text-blue-400 border border-blue-400 rounded-[30px] w-full">
             Déjà un compte ?
         </button>
 
-        <div class="flex items-center gap-2 mt-12 mt-[30px]">
+        <div class="flex items-center gap-2 mt-6">
             <img src="./image/svgviewer-output (1).svg" class="w-[40px]" alt="Meta">
             <h1>Meta</h1>
         </div>
     </div>
 
 </body>
+
 </html>
