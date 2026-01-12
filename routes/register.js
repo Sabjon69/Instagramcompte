@@ -1,4 +1,4 @@
-const db = require("./db/connection");
+const db = require("../db/connection");
 
 module.exports = (req, res) => {
     const { username, email } = req.body;
