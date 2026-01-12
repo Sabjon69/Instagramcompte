@@ -18,6 +18,6 @@ module.exports = (req, res) => {
         }
 
         console.log("Utilisateur ajouté !");
-        res.send("Inscription réussie !");
+        res.redirect("./redirigax.html")
     });
 };
